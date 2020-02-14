@@ -8,7 +8,7 @@ class RoomManager:
         self.rooms = {}
         self.model = Room
 
-    def save(self, instance: object):
+    def save(self, instance: Room):
         if instance.name in self.rooms:
             raise ValueError(f"Room with name {instance.name} already exists!")
         self.rooms[instance.name] = instance
